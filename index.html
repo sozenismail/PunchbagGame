@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="vue-app">
+
+
+        <div id="bag" v-bind:class="{burst:ended}"> </div>
+
+
+        <div id="bag-health">
+
+            <div :style="{width:health+'%'}"></div>
+        </div>
+
+        <div id="controls">
+            <a href="#punch">
+            <img @click="punch" v-show="!ended"  src="img/kill.png" style="width:100px;">
+             </a>
+             
+             <a href="#restart">
+                <img @click="restart"  src="img/restart.png" style="width:100px;">
+              </a>
+           
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
